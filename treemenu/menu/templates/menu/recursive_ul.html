@@ -1,0 +1,13 @@
+{% load draw_menu %}
+{% for k, v in Menu1.items %}
+    <li>
+
+        <a href="{{v}}">{{ k }}</a>
+        {% if v|get_type == 'dict' %}
+            <ul>
+                {% include "menu/recursive_ul.html" with Menu1=v %}
+            </ul>
+        {% else %}
+        {% endif %}
+    </li>
+{% endfor %}

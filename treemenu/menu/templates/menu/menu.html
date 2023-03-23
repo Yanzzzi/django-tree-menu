@@ -1,5 +1,7 @@
 {% extends 'menu/base.html' %}
 
 {% block menu %}
-<h1>Menu</h1>
+{% load draw_menu %}
+
+{% draw_menu 'Menu1' %}
 {% endblock %}
